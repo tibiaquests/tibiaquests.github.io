@@ -1,0 +1,55 @@
+const routes = [
+  {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: 'app/home', component: () => import('pages/Home.vue') },
+      { path: 'banshee/requirements', component: () => import('pages/banshee/Requirements.vue') },
+      { path: 'banshee/entrance', component: () => import('pages/banshee/Entrance.vue') },
+      { path: 'banshee/seal-1', component: () => import('pages/banshee/Seal-1.vue') },
+      { path: 'banshee/seal-2', component: () => import('pages/banshee/Seal-2.vue') },
+      { path: 'banshee/seal-3', component: () => import('pages/banshee/Seal-3.vue') },
+      { path: 'banshee/seal-4', component: () => import('pages/banshee/Seal-4.vue') },
+      { path: 'banshee/seal-5', component: () => import('pages/banshee/Seal-5.vue') },
+      { path: 'banshee/seal-6', component: () => import('pages/banshee/Seal-6.vue') },
+      { path: 'banshee/seal-7', component: () => import('pages/banshee/Seal-7.vue') },
+      { path: 'banshee/return', component: () => import('pages/banshee/Return.vue') },
+      { path: 'banshee/last-room', component: () => import('pages/banshee/LastRoom.vue') },
+      { path: 'poi/requirements', component: () => import('pages/poi/Requirements.vue') },
+      { path: 'poi/entrance', component: () => import('pages/poi/Entrance.vue') },
+      { path: 'poi/hall-of-four-ways', component: () => import('pages/poi/HallOfFourWays.vue') },
+      { path: 'poi/levers', component: () => import('pages/poi/Levers.vue') },
+      { path: 'poi/maze', component: () => import('pages/poi/Maze.vue') },
+      { path: 'poi/main', component: () => import('pages/poi/Main.vue') },
+      { path: 'poi/seal-1', component: () => import('pages/poi/Seal-1.vue') },
+      { path: 'poi/seal-2', component: () => import('pages/poi/Seal-2.vue') },
+      { path: 'poi/seal-3', component: () => import('pages/poi/Seal-3.vue') },
+      { path: 'poi/seal-4', component: () => import('pages/poi/Seal-4.vue') },
+      { path: 'poi/seal-5', component: () => import('pages/poi/Seal-5.vue') },
+      { path: 'poi/seal-6', component: () => import('pages/poi/Seal-6.vue') },
+      { path: 'poi/seal-7', component: () => import('pages/poi/Seal-7.vue') },
+      { path: 'poi/reward', component: () => import('pages/poi/Reward.vue') },
+      { path: 'poi/faq', component: () => import('pages/poi/Faq.vue') },
+
+      { path: 'inq/requirements', component: () => import('pages/inq/Requirements.vue') },
+      { path: 'inq/mission-1', component: () => import('pages/inq/Mission-1.vue') },
+      { path: 'inq/mission-2', component: () => import('pages/inq/Mission-2.vue') },
+      { path: 'inq/mission-3', component: () => import('pages/inq/Mission-3.vue') },
+      { path: 'inq/mission-4', component: () => import('pages/inq/Mission-4.vue') },
+      { path: 'inq/mission-5', component: () => import('pages/inq/Mission-5.vue') },
+      { path: 'inq/mission-6', component: () => import('pages/inq/Mission-6.vue') },
+      { path: 'inq/mission-7', component: () => import('pages/inq/Mission-7.vue') },
+      { path: 'inq/the-dark-path', component: () => import('pages/inq/mission-7/TheDarkPath.vue') },
+      { path: 'inq/the-crystal-caves', component: () => import('pages/inq/mission-7/TheCrystalCaves.vue') },
+      { path: 'inq/the-blood-halls', component: () => import('pages/inq/mission-7/TheBloodHalls.vue') },
+      { path: 'inq/the-vats', component: () => import('pages/inq/mission-7/TheVats.vue') },
+      { path: 'inq/the-arcanum', component: () => import('pages/inq/mission-7/TheArcanum.vue') },
+      { path: 'inq/the-hive', component: () => import('pages/inq/mission-7/TheHive.vue') },
+      { path: 'inq/the-shadow-nexus', component: () => import('pages/inq/mission-7/TheShadowNexus.vue') },
+      { path: 'inq/reward', component: () => import('pages/inq/Reward.vue') },
+      { path: '*', redirect: 'app/home' }
+    ]
+  }
+]
+
+export default routes
