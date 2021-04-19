@@ -1,0 +1,37 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 10, 12, 14
+		"args": { "VARIANT": "12" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"octref.vetur",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"coenraads.bracket-pair-colorizer",
+		"dracula-theme.theme-dracula",
+		"vincaslt.highlight-matching-tag",
+		"pkief.material-icon-theme",
+		"editorconfig.editorconfig",
+		"christian-kohler.path-intellisense",
+		"syler.sass-indented"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8081],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install",
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node"
+}

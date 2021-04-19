@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <q-btn
+      label="Cancelar"
+      bg-color="grey-5"
+      text-color="grey-8"
+      size="11px"
+      v-close-popup
+    />
+  </div>
+</template>
